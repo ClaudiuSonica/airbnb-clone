@@ -1,0 +1,26 @@
+@import "../../../../scss/variables";
+
+.hero--text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-inline-start: 1.25rem;
+
+  .hero--title {
+    color: $black;
+    font-family: $poppins;
+    font-size: 2.25rem;
+    font-weight: $medium;
+    line-height: 110%;
+  }
+
+  .hero--p {
+    color: $gray;
+    font-family: $poppins;
+    font-size: 1rem;
+    font-weight: $light;
+    line-height: 110%;
+    width: 35ch;
+  }
+}
