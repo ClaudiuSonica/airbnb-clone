@@ -6,6 +6,7 @@
   align-items: flex-start;
   gap: 1rem;
   padding-inline-start: 1.25rem;
+  margin-block-end: 3.06rem;
 
   .hero--title {
     color: $black;
@@ -21,6 +22,6 @@
     font-size: 1rem;
     font-weight: $light;
     line-height: 110%;
-    width: 35ch;
+    max-width: 35ch;
   }
 }

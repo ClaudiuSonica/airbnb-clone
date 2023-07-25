@@ -1,0 +1,72 @@
+@import '../../../scss/variables';
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-inline-start: 1.25rem;
+  gap: .5rem;
+
+  .card--img__container {
+    position: relative;
+
+    .card--ticket {
+      position: absolute;
+      z-index: 100;
+      top: 4%;
+      left: 1%;
+      background-color: $white;
+      color: $gray;
+      text-align: center;
+      font-size: 0.64rem;
+      font-family: $poppins;
+      line-height: 110%;
+      padding: 0.25rem;
+    }
+  }
+
+  .card--rating {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+
+    p {
+      color: $gray;
+      font-family: $poppins;
+      font-size: 0.75rem;
+      font-weight: $light;
+      line-height: 110%;
+    }
+
+    span {
+      color: $light-violet;
+      font-family: $poppins;
+      font-size: 0.75rem;
+      font-weight: $light;
+      line-height: 110%;
+    }
+  }
+
+  .card--description {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    p {
+      color: $gray;
+      font-family: $poppins;
+      font-size: 0.75rem;
+      font-weight: $light;
+      line-height: 110%;
+    }
+
+    span {
+      color: $gray;
+      font-family: $poppins;
+      font-size: 0.75rem;
+      font-weight: $medium;
+      line-height: 110%;
+    }
+  }
+}
