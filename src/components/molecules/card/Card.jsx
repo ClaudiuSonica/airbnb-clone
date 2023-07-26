@@ -2,25 +2,36 @@
 import "./Card.scss";
 
 const Card = (props) => {
+  let ticketText;
+
+  if (props.openSpots === 0) {
+    ticketText = "Sold out";
+  } else if (props.location === "Online") {
+    ticketText = "Online";
+  }
+
   return (
     <div className="card">
       <div className="card--img__container">
-        {props.ticket && <p className="card--ticket">{props.ticket}</p>}
-        <img src={`/assets/${props.img}`} alt="runner photo" />
+        {ticketText && (
+          <p className="card--ticket">
+            {ticketText}
+          </p>
+        )}
+        <img src={`/assets/${props.coverImg}`} alt="runner photo" />
       </div>
       <div className="card--rating">
         <img src="/assets/Star.svg" alt="star" />
         <p>
-          {props.rating}
-          ({props.reviewCount})
+          {props.stats.rating}({props.stats.reviewCount})
         </p>
         <img src="/assets/Ellipse.svg" alt="ellipse" />
-        <span>{props.country}</span>
+        <span>{props.location}</span>
       </div>
       <div className="card--description">
         <p>{props.title}</p>
         <p>
-          <span>From {props.price}</span> / person
+          <span>From ${props.price}</span> / person
         </p>
       </div>
     </div>
