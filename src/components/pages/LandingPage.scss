@@ -1,0 +1,15 @@
+@import '../../scss/variables';
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .cta {
+    flex-direction: row;
+  }
+}

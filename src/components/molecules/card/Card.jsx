@@ -1,21 +1,27 @@
+/* eslint-disable react/prop-types */
 import "./Card.scss";
 
-const Card = () => {
+const Card = (props) => {
   return (
     <div className="card">
       <div className="card--img__container">
-        <p className="card--ticket">Sold out</p>
-        <img src="/assets/runner.png" alt="runner photo" />
+        {props.ticket && <p className="card--ticket">{props.ticket}</p>}
+        <img src={`/assets/${props.img}`} alt="runner photo" />
       </div>
       <div className="card--rating">
         <img src="/assets/Star.svg" alt="star" />
-        <p>5.0(6)</p>
+        <p>
+          {props.rating}
+          ({props.reviewCount})
+        </p>
         <img src="/assets/Ellipse.svg" alt="ellipse" />
-        <span>USA</span>
+        <span>{props.country}</span>
       </div>
       <div className="card--description">
-        <p>Life lessons with Katie Zaferes</p>
-        <p><span>From $136</span> / person</p>
+        <p>{props.title}</p>
+        <p>
+          <span>From {props.price}</span> / person
+        </p>
       </div>
     </div>
   );
